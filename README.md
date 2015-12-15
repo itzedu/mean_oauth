@@ -1,6 +1,6 @@
 # MEAN-OAuth
 
-Passport strategies for authenticating with Google and Facebook using OAuth 2.0
+OAuth 2.0 Google and Facebook user authentication using Passport (http://passportjs.org/)
 
 ## Setup
 
