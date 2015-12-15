@@ -6,7 +6,15 @@ OAuth 2.0 Google and Facebook user authentication using Passport (http://passpor
 
 Register your application on Facebook's developers platform (https://developers.facebook.com) and on Google's developers console (https://console.developers.google.com)
 
-## Facebook
+Install passport, passport-facebook and passport-google-oauth
+
+```
+$ npm install passport
+$ npm install passport-facebook
+$ npm install passport-google-oauth
+```
+
+### Facebook
 
 Upon registration, add your client_id and secret_id. You will need express to listen to the callback url in your routes.
 
@@ -47,7 +55,7 @@ passport.use(new FacebookStrategy({
 ));
 ```
 
-## Google
+### Google
 
 Upon registration, add your client_id and secret_id. You might have to enable Google+ API in the developers console depending on the scope that you set in the initial authentication request. You will need express to listen to the callback url in your routes.
 
