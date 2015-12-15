@@ -6,7 +6,7 @@ var UserSchema = new mongoose.Schema({
 	authId: Number,
 	name: String,
 	provider: String,
-	facebook: Object
+	json_info: Object
 });
 
 mongoose.model("User", UserSchema);
