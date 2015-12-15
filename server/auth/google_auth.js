@@ -4,12 +4,11 @@ var passport = require("passport");
 var GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 passport.use(new GoogleStrategy({
-		clientID: YOUR_APP_ID
-		clientSecret: YOUR_SECRET_ID,
+		clientID: "967557149281-nqf598m2ksgtfqciar9o9nsscbgn65ji.apps.googleusercontent.com",
+		clientSecret: "dqvWVjY6DiogyuTX7MJL7MUr",
 		callbackURL: "http://localhost:8000/auth/google/callback"
 	},
 	function(accessToken, refreshToken, profile, done) {
-		console.log(profile);
 		User.findOne({ authId: profile.id }, function(err, user) {
 			if(err) {
 				return done(err);
@@ -34,12 +33,3 @@ passport.use(new GoogleStrategy({
 		})
 	}
 ));
-
-
-passport.serializeUser(function(user, done) {
-  done(null, user);
-});
-
-passport.deserializeUser(function(user, done) {
-  done(null, user);
-});
